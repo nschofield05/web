@@ -1,0 +1,25 @@
+:root{
+    --darkgradient: linear-gradient(to bottom, rgb(59, 59, 59), rgb(19, 19, 19));
+    --accentcolor: rgb(183, 0, 255, 0.5);
+}
+
+body{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    height: 64px;
+
+    background: var(--darkgradient);
+    color: white;
+    text-align: center;
+}
+
+h1{
+    height: 100%;
+    margin: 0px;
+    background: linear-gradient(to right, var(--accentcolor) 20%, transparent 40%);
+    border-bottom: rgb(59, 59, 59) solid 2px;
+}
