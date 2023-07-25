@@ -12,11 +12,11 @@ body{
 }
 
 header{
-    width:75%;
+    width:100%;
     height: 64px;
     position: absolute;
-    left: 12.5%;
-    top: 16px;
+    left: 0%;
+    top: 0px;
 
     background: var(--darkgradient);
     color: white;
@@ -30,7 +30,7 @@ main{
     width: 75%;
     height: 320px;
     margin: auto;
-    margin-top: 96px;
+    margin-top: 80px;
     background: var(--darkgradient);
     border-radius: 16px;
 }
@@ -46,8 +46,8 @@ main{
 
 .logo{
     width: 50%;
-    height: 100%;
-    margin: 0px;
+    height: 48px;
+    margin: 8px;
     background: linear-gradient(165deg, var(--accentcolor) 20%, transparent 50%);
     border-radius: 16px;
     float:left;
