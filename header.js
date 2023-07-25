@@ -1,9 +1,18 @@
-fetch('header.html')
-.then(res => res.text())
-.then(text => {
-    let oldelem = document.querySelector("script#replace_with_header");
-    let newelem = document.createElement("div");
-    newelem.innerHTML = text;
-    oldelem.parentNode.replaceChild(newelem,oldelem);
-})
+var header =
+`<header>\
+<button onclick="toggleNav()" class="navButton" ><img src="assets/icons/hamburger.png" width="32px" height="32px"></button>\
+<h1 class="logo"><img src="assets/logo-icon.png" class="logo-icon">nthndv.github.io</h1>\
+<button onclick="togglePalettes()" class="iconButton"><img src="assets/icons/palette-fill.png" width="32px" height="32px"></button>\
+<div id="paletteDropdown" class="paletteDropdown">\
+    <div class="paletteButtons">\
+        <button onclick="setAccent('rgba(255, 0, 0, 0.5)')" style="color: red;">Red</button>\
+        <button onclick="setAccent('rgba(255, 187, 0, 0.5)')" style="color: rgb(255, 187, 0);">Gold</button>\
+        <button onclick="setAccent('rgba(0, 255, 0, 0.5)')" style="color: rgb(0, 255, 0);">Green</button>\
+        <button onclick="setAccent('rgba(0, 128, 255, 0.5)')" style="color: rgb(0, 0, 255);">Blue</button>\
+        <button onclick="setAccent('rgb(183, 0, 255, 0.5)' )" style="color: rgb(183, 0, 255);">Purple</button>\
+        <button onclick="setAccent('rgb(255, 0, 149, 0.5)')" style="color: rgb(255, 0, 149);">Pink</button>\
+    </div>\
+</div>\
+</header>`;
 
+document.body.insertAdjacentHTML("afterbegin", header);

@@ -1,9 +1,9 @@
-fetch('nav.html')
-.then(res => res.text())
-.then(text => {
-    let oldelem = document.querySelector("script#replace_with_nav");
-    let newelem = document.createElement("div");
-    newelem.innerHTML = text;
-    oldelem.parentNode.replaceChild(newelem,oldelem);
-})
+var nav =
+`<nav>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <hr>
+    </ul>
+</nav>`;
 
+document.body.insertAdjacentHTML("afterbegin", nav);
