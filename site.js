@@ -53,3 +53,16 @@ function toggleLogIn(){
     }
 
 }
+
+function attemptLogIn(){
+    var uname = document.getElementById('uname').value;
+    var pswrd = document.getElementById('pswrd').value;
+
+    if (uname === "nthndv" && pswrd === "Variable1234"){
+        alert("correct");
+    }
+    else{
+        alert("wrong");
+    }
+
+}

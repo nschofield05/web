@@ -27,9 +27,9 @@ body{
 .log-in{
     background: var(--darkgradient);
     position: fixed;
-    width: 50%;
+    width: 25%;
     height: 50%;
-    left: 25%;
+    left: 37.5%;
     top: 25%;
     border-bottom: rgb(59, 59, 59) solid 2px;
     border-radius: 16px;
@@ -66,6 +66,11 @@ nav{
     animation-direction: normal;
     animation-duration: 0.1s; */
 
+}
+
+.container{
+    width: 50%;
+    margin: auto;
 }
 
 @keyframes navpos{
