@@ -14,12 +14,25 @@ body{
 header{
     width:75%;
     height: 64px;
-    margin: auto;
+    position: absolute;
+    left: 12.5%;
+    top: 16px;
 
     background: var(--darkgradient);
     color: white;
     text-align: center;
     border-bottom: rgb(59, 59, 59) solid 2px;
+    border-radius: 16px;
+}
+
+main{
+    clear: both;
+    width: 75%;
+    height: 320px;
+    margin: auto;
+    margin-top: 96px;
+    background: var(--darkgradient);
+    border-radius: 16px;
 }
 
 .iconButton, .iconButton:hover, .iconButton:active{
@@ -35,7 +48,8 @@ header{
     width: 50%;
     height: 100%;
     margin: 0px;
-    background: linear-gradient(165deg, var(--accentcolor) 30%, transparent 60%);
+    background: linear-gradient(165deg, var(--accentcolor) 20%, transparent 50%);
+    border-radius: 16px;
     float:left;
 }
 
@@ -43,12 +57,13 @@ header{
     width: 80px;
     position: absolute;
     top: 63px;
-    right: 12.5%;
+    right: 0%;
     text-align: center;
     
     background: rgb(19, 19, 19);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    z-index: 1;
     display: none;
 }
 
@@ -69,4 +84,8 @@ button, button:active{
 button:hover{
     color: white;
     background: var(--mediumgradient);
+}
+
+p{
+    padding: 16px;
 }

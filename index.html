@@ -22,24 +22,46 @@
 
     </header>
 
+    <main>
+        <section>
+            <p>testing sdhfgsizuyhfihlsf befi ueyf  wiyr defief   eif   fweif f  v v  ef bsef lef sef eh fehf</p>
+        </section>
+    </main>
+
 </body>
 
 <script>
 
     var root = document.querySelector(':root');
+    var dropdown = document.getElementById("paletteDropdown");
+    var header = document.getElementsByTagName("header")[0];
+    
+    window.onload = loadPrefs();
 
     function setAccent(color){
         root.style.setProperty('--accentcolor', color);
+        savePrefs();
+        dropdown.style.display = "none";
     }
 
     function togglePalettes(){
-        var dropdown = document.getElementById("paletteDropdown")
         if (dropdown.style.display !== "block"){
             dropdown.style.display = "block";
+            header.style.borderBottomRightRadius = "0px";
         }
         else{
             dropdown.style.display = "none";
+            header.style.borderBottomRightRadius = "16px";
         }
+    }
+
+    function savePrefs(){
+        localStorage.setItem('accentColor', root.style.getPropertyValue('--accentcolor'));
+    }
+
+    function loadPrefs(){
+        var data = localStorage.getItem('accentColor');
+        setAccent(data);
     }
 
 </script>
