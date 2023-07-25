@@ -7,5 +7,3 @@ fetch('nav.html')
     oldelem.parentNode.replaceChild(newelem,oldelem);
 })
 
-alert("nav added!");
-

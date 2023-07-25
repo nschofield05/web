@@ -1,4 +1,3 @@
-
 fetch('header.html')
 .then(res => res.text())
 .then(text => {

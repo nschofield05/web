@@ -25,7 +25,7 @@
     var header = document.getElementsByTagName("header")[0];
     var nav = document.getElementsByTagName("nav")[0];
     
-    window.onload = loadPrefs;
+    window.onload = createHeader();
 
     function setAccent(color){
         root.style.setProperty('--accentcolor', color);
