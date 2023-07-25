@@ -15,6 +15,26 @@ body{
     padding: 0px;
 }
 
+.log-in-container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    pointer-events: none;
+}
+
+.log-in{
+    background: var(--darkgradient);
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+    border-bottom: rgb(59, 59, 59) solid 2px;
+    border-radius: 16px;
+}
+
 header{
     width:100%;
     min-height: 64px;
@@ -54,22 +74,24 @@ nav{
 }
 
 main{
-    clear: both;
     width: 75%;
-    height: 320px;
     margin: auto;
     margin-top: 80px;
+}
+
+section{
+    height: 320px;
     background: var(--darkgradient);
     border-radius: 16px;
 }
 
-.iconButton, .iconButton:hover, .iconButton:active{
+.palette-button, .palette-button:hover, .palette-button:active{
     width: 32px;
     background: transparent;
     border-style: none;
     float: right;
     margin-top: 16px;
-    margin-right: 32px;;
+    margin-right: 32px;
 }
 
 .navButton, .navButton:hover, .navButton:active{
@@ -79,6 +101,13 @@ main{
     left: 16px;
     background: transparent;
     border-style: none;
+}
+
+.log-in-button, .log-in-button:hover, .log-in-button:active{
+    width: 64px;
+    float: right;
+    margin-top: 16px;
+    margin-right: 32px;
 }
 
 .logo{
@@ -102,13 +131,12 @@ main{
     width: 80px;
     position: absolute;
     top: 63px;
-    right: 0%;
+    right: 96px;
     text-align: center;
     
     background: var(--darkergradient);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    z-index: 1;
     display: none;
 }
 
@@ -165,4 +193,13 @@ hr{
     height: 0px;
     border-style: solid 1px;
     border-color: var(--accentcolor);
+}
+
+.x-button, .x-button:hover, .x-button:active{
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    float: right;
+    margin-right: 8px;
 }

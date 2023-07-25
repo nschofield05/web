@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <script src="login.js"></script>
     <script src="header.js"></script>
     <script src="nav.js"></script>
 
@@ -16,50 +17,6 @@
         </section>
     </main>
     
+    <script src="site.js"></script>
+
 </body>
-
-<script>
-
-    var root = document.querySelector(':root');
-    var dropdown = document.getElementById("paletteDropdown");
-    var header = document.getElementsByTagName("header")[0];
-    var nav = document.getElementsByTagName("nav")[0];
-    
-    window.onload = loadPrefs;
-
-    function setAccent(color){
-        root.style.setProperty('--accentcolor', color);
-        savePrefs();
-        dropdown.style.display = "none";
-    }
-
-    function togglePalettes(){
-        if (dropdown.style.display !== "block"){
-            dropdown.style.display = "block";
-            header.style.borderBottomRightRadius = "0px";
-        }
-        else{
-            dropdown.style.display = "none";
-            header.style.borderBottomRightRadius = "16px";
-        }
-    }
-
-    function toggleNav(){
-        if (nav.style.left !== "0px"){
-            nav.style.left = "0px";
-        }
-        else{
-            nav.style.left = "calc(0px - 13%)";
-        }
-    }
-
-    function savePrefs(){
-        localStorage.setItem('accentColor', root.style.getPropertyValue('--accentcolor'));
-    }
-
-    function loadPrefs(){
-        var data = localStorage.getItem('accentColor');
-        setAccent(data);
-    }
-
-</script>
