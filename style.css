@@ -1,25 +1,72 @@
 :root{
     --darkgradient: linear-gradient(to bottom, rgb(59, 59, 59), rgb(19, 19, 19));
+    --mediumgradient: linear-gradient(to bottom, rgb(99, 99, 99), rgb(59, 59, 59));
     --accentcolor: rgb(183, 0, 255, 0.5);
 }
 
 body{
-    background-color: black;
+    background-color: rgb(12, 12, 12);
+    color: white;
     margin: 0px;
     padding: 0px;
 }
 
 header{
+    width:75%;
     height: 64px;
+    margin: auto;
 
     background: var(--darkgradient);
     color: white;
     text-align: center;
+    border-bottom: rgb(59, 59, 59) solid 2px;
 }
 
-h1{
+.iconButton, .iconButton:hover, .iconButton:active{
+    width: 32px;
+    background: transparent;
+    border-style: none;
+    float: right;
+    margin-top: 16px;
+    margin-right: 32px;;
+}
+
+.logo{
+    width: 50%;
     height: 100%;
     margin: 0px;
-    background: linear-gradient(to right, var(--accentcolor) 20%, transparent 40%);
-    border-bottom: rgb(59, 59, 59) solid 2px;
+    background: linear-gradient(165deg, var(--accentcolor) 30%, transparent 60%);
+    float:left;
+}
+
+.paletteDropdown{
+    width: 80px;
+    position: absolute;
+    top: 63px;
+    right: 12.5%;
+    text-align: center;
+    
+    background: rgb(19, 19, 19);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none;
+}
+
+.paletteButtons{
+    width: 64px;
+    margin: auto;
+}
+
+button, button:active{
+    transition-duration: 0.1s;
+    width: 100%;
+    margin-bottom: 8px;
+    background: var(--darkgradient);
+    border: rgb(59, 59, 59) solid 2px;
+    color: lightgray;
+}
+
+button:hover{
+    color: white;
+    background: var(--mediumgradient);
 }
