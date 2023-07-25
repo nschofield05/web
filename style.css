@@ -1,4 +1,5 @@
 :root{
+    --darkergradient: linear-gradient(to bottom, rgb(19, 19, 19), rgb(4, 4, 4));
     --darkgradient: linear-gradient(to bottom, rgb(59, 59, 59), rgb(19, 19, 19));
     --mediumgradient: linear-gradient(to bottom, rgb(99, 99, 99), rgb(59, 59, 59));
     --accentcolor: rgb(183, 0, 255, 0.5);
@@ -25,6 +26,30 @@ header{
     border-radius: 16px;
 }
 
+nav{
+    width: 12.5%;
+    height: calc(100% - 66px);
+    position: absolute;
+    left: calc(0px - 13%);
+    top: 66px;
+    background: var(--darkergradient);
+    box-shadow: 4px 0px 8px black, 8px 0px 16px rgba(0, 0, 0, 0.349);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.1s;
+
+    /*
+    animation-name: navpos;
+    animation-direction: normal;
+    animation-duration: 0.1s; */
+
+}
+
+@keyframes navpos{
+    from {width: 0%;}
+    to {width: 12.5%;}
+}
+
 main{
     clear: both;
     width: 75%;
@@ -44,6 +69,15 @@ main{
     margin-right: 32px;;
 }
 
+.navButton, .navButton:hover, .navButton:active{
+    width: 32px;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: transparent;
+    border-style: none;
+}
+
 .logo{
     width: 50%;
     height: 48px;
@@ -60,7 +94,7 @@ main{
     right: 0%;
     text-align: center;
     
-    background: rgb(19, 19, 19);
+    background: var(--darkergradient);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     z-index: 1;
@@ -88,4 +122,30 @@ button:hover{
 
 p{
     padding: 16px;
+}
+
+.nav-links{
+    display:block;
+    padding: 0px;
+    list-style: none;
+    width: 75%;
+    margin: auto;
+    margin-top: 16px;
+    font-size: 24px;
+}
+
+.nav-links a{
+    display:block;
+    width: 100%;
+    margin-right: 16px;
+    color: white;
+    text-decoration: none;
+    transition: 0.1;
+    padding-left: 16px;
+}
+
+.nav-links a:hover{
+    width: 100%;
+    background: linear-gradient(to right, var(--accentcolor), transparent);
+    text-shadow: 0 0 10px #fff, 0 0 20px var(--accentcolor);
 }
