@@ -4,6 +4,7 @@ var header =
     <h1 class="logo"><img src="assets/logo-icon.png" class="logo-icon">nthndv.github.io</h1>   
     <button onclick="toggleLogIn()" class="log-in-button">Log In</button>
     <button onclick="togglePalettes()" class="palette-button"><img src="assets/icons/palette-fill.png" width="32px" height="32px"></button>
+    <button onclick="window.location.href='blogWrite.html';" class="write-button"><img src="assets/icons/pencil.png" width="32px" height="32px"></button>
 
     <div id="paletteDropdown" class="paletteDropdown">
         <div class="paletteButtons">

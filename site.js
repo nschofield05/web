@@ -1,3 +1,5 @@
+var isAdmin = false;
+
 var root = document.querySelector(':root');
 var dropdown = document.getElementById("paletteDropdown");
 var header = document.getElementsByTagName("header")[0];
@@ -34,8 +36,12 @@ function savePrefs(){
 }
 
 function loadPrefs(){
-    var data = localStorage.getItem('accentColor');
-    setAccent(data);
+    var ac = localStorage.getItem('accentColor');
+    var ia = localStorage.getItem('isAdmin');
+    setAccent(ac);
+    if (ia == 'true'){
+        setAdmin();
+    }
 }
 
 function toggleLogIn(){
@@ -59,10 +65,16 @@ function attemptLogIn(){
     var pswrd = document.getElementById('pswrd').value;
 
     if (uname === "nthndv" && pswrd === "Variable1234"){
-        alert("correct");
+        setAdmin();
     }
-    else{
-        alert("wrong");
-    }
+}
+
+function setAdmin(){
+    var writeButton = document.getElementsByClassName("write-button")[0];
+
+    isAdmin = true;
+    localStorage.setItem('isAdmin', isAdmin);
+
+    writeButton.style.display = "block";
 
 }

@@ -115,6 +115,16 @@ section{
     margin-right: 32px;
 }
 
+.write-button, .write-button:hover, .write-button:active{
+    width: 32px;
+    background: transparent;
+    border-style: none;
+    float: right;
+    margin-top: 16px;
+    margin-right: 32px;
+    display: none;
+}
+
 .logo{
     width: 75%;
     height: 48px;
@@ -148,6 +158,18 @@ section{
 .paletteButtons{
     width: 64px;
     margin: auto;
+}
+
+.blog-body{
+    width: 50%; 
+    height: 50%;
+    margin: auto; 
+    margin-top: 1%; 
+    padding: 16px;
+    background-color: white; 
+    color: black; 
+    border-radius: 16px;
+    text-align: left;
 }
 
 button, button:active{
